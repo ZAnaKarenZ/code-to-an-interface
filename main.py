@@ -41,8 +41,19 @@ class CoralReef(Biome):
 
 
 #Main function
-
+def main():
     #Forest
+    print("Forest sounds:")
     forest = TemperateDeciduousForest()
     for animal in forest.getAnimals():
         animal.makeSound()
+
+    #Coral reef
+    print("Coral reef:")
+    reef = CoralReef()
+    for animal in reef.getAnimals():
+        animal.makeSound()
+
+
+if __name__ == "__main__":
+    main()
