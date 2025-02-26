@@ -29,6 +29,9 @@ class Biome:
     @abstractmethod
     def getAnimals(self):
         pass
+    def ambientSound(self):
+        for animal in self.getAnimals():
+            animal.makeSound()
 
 #Concrete classes
 class TemperateDeciduousForest(Biome):
@@ -45,14 +48,12 @@ def main():
     #Forest
     print("Forest sounds:")
     forest = TemperateDeciduousForest()
-    for animal in forest.getAnimals():
-        animal.makeSound()
+    forest.ambientSound()
 
     #Coral reef
-    print("Coral reef:")
+    print("Coral reef sounds:")
     reef = CoralReef()
-    for animal in reef.getAnimals():
-        animal.makeSound()
+    reef.ambientSound()
 
 
 if __name__ == "__main__":
